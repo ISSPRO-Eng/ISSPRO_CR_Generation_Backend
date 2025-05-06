@@ -30,9 +30,9 @@ app.post('/upload', upload.single('zipFile'), async (req, res) => {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "matta@isspro.com,lucyw@isspro.com",
+      to: "matta@isspro.com,danielb@isspro.com,bob@isspro.com",
       subject: 'New quote request from isspro.com!',
-      text: 'See attached ZIP file.',
+      text: 'See the attached ZIP file for the CR Request and any additional documentation.',
       attachments: [
         {
           filename: req.file.originalname,
